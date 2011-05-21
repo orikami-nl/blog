@@ -11,7 +11,7 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
     when /the new post page/
-      '/blog/post/new'
+      '/blog/posts/new'
       #new_blog_post_path
 
     # Add more mappings here.
