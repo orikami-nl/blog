@@ -1,17 +1,29 @@
-Given /^I am visitor$/ do   
+Given /^I am a visitor$/ do   
 end
 
 When /^I create a new post$/ do
   fill_in 'Title', :with => 'testtitle'
   fill_in 'Content', :with => 'text'
   fill_in 'Excerpt', :with => 'test'
-  select '15', :from => 'days'
-  select 'March', :from => 'month'
-  selcet '2011', :from => 'year'
+  When %(I select "August 7, 2010 07:00PM" as the "Published at" date)
   click_button 'Submit'
+  @post = Blog::Post.find_by_title('testtitle')
 end
 
-Then /^a blog is created$/ do
+Then /^the post is published$/ do
+  page.should have_content 'Post was successfully created.'
+  When 'I go to this post page' 
   page.should have_content 'testtitle'
+end
+
+
+Then /^I can see how many words I have typed$/ do
+  def count_words
+    split(/\S+/).size
+  end
+end
+
+Then /^I can see how many links I have added to the text$/ do
+  pending # express the regexp above with the code you wish you had
 end
 

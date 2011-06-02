@@ -5,14 +5,16 @@ module NavigationHelpers
   #
   # step definition in web_steps.rb
   #
+include Blog::Engine.routes.url_helpers
   def path_to(page_name)
     case page_name
 
     when /the home\s?page/
       '/'
     when /the new post page/
-      '/blog/posts/new'
-      #new_blog_post_path
+       new_post_path
+    when /this post page/
+      post_path(@post)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
