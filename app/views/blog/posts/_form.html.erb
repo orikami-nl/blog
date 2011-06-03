@@ -1,4 +1,4 @@
-<%= form_for(@post) do |f| %>
+<%= simple_form_for @post do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -11,29 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+  <div>
+    <%= f.input :title %>
+    <%= f.input :excerpt %>
+    <%= f.input :body, :label => 'Content' %>
+    <%= f.input :published_at %>
+    <%= f.input :metatags %>
+    <%= f.button :submit, :id => 'submit' %>
   </div>
-  <div class="field">
-    <%= f.label :excerpt %><br />
-    <%= f.text_area :excerpt %>
-  </div>
-  <div class="field">
-    <%= f.label :body, 'Content' %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="field">
-    <%= f.label :published_at %><br />
-    <%= f.datetime_select :published_at %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Submit' %>
-  </div>
-<% end %>
-
-
-
-
-
-    
+<% end %>    

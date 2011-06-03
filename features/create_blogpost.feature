@@ -8,7 +8,13 @@ Scenario: Posting blogpost
   And I am on the new post page
   When I create a new post
   Then the post is published
-  
+ 
+Scenario: Adding metatags
+  Given I am a visitor 
+  When I create a new post
+  And I add metatags
+  Then the post is published
+
 # the article is saved as a draft
 
 #Scenario: Helping with posting

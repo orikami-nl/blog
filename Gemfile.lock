@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    blog (0.0.1)
+      simple_form
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -122,6 +128,7 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    simple_form (1.4.0)
     sprockets (2.0.0.beta.2)
       hike (~> 1.0)
       rack (~> 1.0)
@@ -140,10 +147,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  blog!
   capybara
   cucumber-rails
   database_cleaner
   factory_girl_rails
   rails (= 3.1.0.beta1)
   rspec-rails
+  simple_form
   sqlite3

@@ -6,7 +6,7 @@ When /^I create a new post$/ do
   fill_in 'Content', :with => 'text'
   fill_in 'Excerpt', :with => 'test'
   When %(I select "August 7, 2010 07:00PM" as the "Published at" date)
-  click_button 'Submit'
+  click_button 'submit'
   @post = Blog::Post.find_by_title('testtitle')
 end
 
@@ -16,12 +16,16 @@ Then /^the post is published$/ do
   page.should have_content 'testtitle'
 end
 
-
-Then /^I can see how many words I have typed$/ do
-  def count_words
-    split(/\S+/).size
-  end
+When /^I add metatags$/ do
+  pending # express the regexp above with the code you wish you had
 end
+
+
+#Then /^I can see how many words I have typed$/ do
+#  def count_words
+#    split(/\S+/).size
+#  end
+#end
 
 Then /^I can see how many links I have added to the text$/ do
   pending # express the regexp above with the code you wish you had
