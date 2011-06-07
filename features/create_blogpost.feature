@@ -9,11 +9,11 @@ Scenario: Posting blogpost
   When I create a new post
   Then the post is published
  
-Scenario: Adding metatags
-  Given I am a visitor 
-  When I create a new post
-  And I add metatags
-  Then the post is published
+#Scenario: Adding metatags
+#  Given I am a visitor 
+#  When I create a new post
+#  And I add metatags
+#  Then the post is published
 
 # the article is saved as a draft
 
@@ -32,7 +32,7 @@ Scenario: Adding metatags
 #Scenario: Reading blogpost
 #  Given I am a visitor
 #  When I read a excerpt
-#  And maximum ten excerpts per page
+#  And maximum ten excerpts per page (use kaminari)
 #  Then I want to read the whole article
 
 #Scenario: Browsing the archive as admin
