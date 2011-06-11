@@ -15,7 +15,9 @@ include Blog::Engine.routes.url_helpers
        new_post_path
     when /this post page/
       post_path(@post)
-
+    when /the blog dashboard/
+      '/blog'    
+    
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

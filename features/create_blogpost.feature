@@ -29,11 +29,17 @@ Scenario: Posting blogpost
 #  Then I add metadata
 #  And I create an alternative URL
 
-#Scenario: Reading blogpost
-#  Given I am a visitor
-#  When I read a excerpt
-#  And maximum ten excerpts per page (use kaminari)
-#  Then I want to read the whole article
+Scenario: Reading blogpost excerpt
+  Given I am a visitor
+  And a blogpost exists
+  When I go to the blog dashboard
+  Then I should see an excerpt
+  
+Scenario: Reading complete blogpost
+  Given I am a visitor
+  When I am on the blog dashboard
+  And I follow "Read more" 
+  Then I should be on this post page
 
 #Scenario: Browsing the archive as admin
 #  Given I am a admin
