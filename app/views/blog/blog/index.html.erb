@@ -1,7 +1,7 @@
 <h1>Blog dashboard</h1>
 
 <section>
-
+  <% if !@posts.nil? %>
   <% @posts.each do |post| %>
   <article>    
     <h1><%= post.title %></h1>
@@ -10,6 +10,6 @@
     <h2><%= link_to "Read more", post %></h2>
   </article>
 <% end %>
-
+<% end %>
 </section>
 

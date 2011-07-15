@@ -7,4 +7,5 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.version = "0.0.1"
   s.add_dependency "simple_form"
+  s.add_dependency "kaminari"
 end
