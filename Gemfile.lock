@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     blog (0.0.1)
+      kaminari
       simple_form
 
 GEM
@@ -40,55 +41,17 @@ GEM
     arel (2.1.1)
     bcrypt-ruby (2.1.4)
     builder (3.0.0)
-    capybara (1.0.0)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      selenium-webdriver (~> 0.2.0)
-      xpath (~> 0.1.4)
-    childprocess (0.1.9)
-      ffi (~> 1.0.6)
-    configuration (1.2.0)
-    css3buttons (0.9.5)
-      actionpack (>= 3.0.0)
-    cucumber (0.10.6)
-      builder (>= 2.1.2)
-      diff-lcs (>= 1.1.2)
-      gherkin (~> 2.4.0)
-      json (>= 1.4.6)
-      term-ansicolor (>= 1.0.5)
-    cucumber-rails (0.5.2)
-      capybara (>= 1.0.0.rc1)
-      cucumber (>= 0.10.5)
-      nokogiri (>= 1.4.4)
-      rack-test (>= 0.5.7)
-    database_cleaner (0.6.7)
-    diff-lcs (1.1.2)
     erubis (2.7.0)
-    factory_girl (1.3.3)
-    factory_girl_rails (1.0.1)
-      factory_girl (~> 1.3)
-      railties (>= 3.0.0)
-    ffi (1.0.9)
-    gherkin (2.4.0)
-      json (>= 1.4.6)
     hike (1.1.0)
     i18n (0.6.0)
-    json (1.5.2)
-    json_pure (1.5.2)
     kaminari (0.12.4)
       rails (>= 3.0.0)
-    launchy (0.4.0)
-      configuration (>= 0.0.5)
-      rake (>= 0.8.1)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
     multi_json (1.0.3)
-    nokogiri (1.4.4)
     polyglot (0.3.1)
     rack (1.3.0)
     rack-cache (1.0.2)
@@ -114,53 +77,26 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.6)
     rake (0.9.2)
-    rspec (2.6.0)
-      rspec-core (~> 2.6.0)
-      rspec-expectations (~> 2.6.0)
-      rspec-mocks (~> 2.6.0)
-    rspec-core (2.6.4)
-    rspec-expectations (2.6.0)
-      diff-lcs (~> 1.1.2)
-    rspec-mocks (2.6.0)
-    rspec-rails (2.6.1)
+    simple_form (1.4.2)
       actionpack (~> 3.0)
-      activesupport (~> 3.0)
-      railties (~> 3.0)
-      rspec (~> 2.6.0)
-    rubyzip (0.9.4)
-    selenium-webdriver (0.2.1)
-      childprocess (>= 0.1.7)
-      ffi (>= 1.0.7)
-      json_pure
-      rubyzip
-    simple_form (1.4.1)
+      activemodel (~> 3.0)
     sprockets (2.0.0.beta.10)
       hike (~> 1.0)
       rack (~> 1.0)
       tilt (!= 1.3.0, ~> 1.1)
     sqlite3 (1.3.3)
-    term-ansicolor (1.0.5)
     thor (0.14.6)
     tilt (1.3.2)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.28)
-    xpath (0.1.4)
-      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   blog!
-  capybara
-  css3buttons
-  cucumber-rails
-  database_cleaner
-  factory_girl_rails
   kaminari
-  launchy
   rails (= 3.1.0.rc1)
-  rspec-rails
   simple_form
   sqlite3
