@@ -1,31 +1,35 @@
-<h1>Listing posts</h1>
+<div id="post_list" class="border">
 
-<%= paginate @posts %>
+<h1>Listing all posts</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Excerpt</th>
-    <th>Body</th>
-    <th>Published at</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<% if @posts.count.zero? %>
+	<p>
+		No posts are present. You may create one by clicking the link.
+	</p>
+<% else %>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.excerpt %></td>
-    <td><%= post.body %></td>
-    <td><%= post.published_at %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+	<%= paginate @posts %>
+		<table id="news_list">
+		  <tr>
+		    <th>Title</th>
+		    <th>Excerpt</th>
+		    <th>Body</th>
+		    <th>Published at</th>
+		    <th></th>
+		  </tr>
 
-<br />
-
+			<% @posts.each do |post| %>
+			  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+			    <td><%= post.title %></td>
+			    <td class="list_description"><%= truncate(strip_tags(post.excerpt), :length => 70) %></td>
+			    <td class="list_description"><%= truncate(strip_tags(post.body), :length => 70) %></td>
+			    <td><%= post.published_at %></td>
+			    <td class="list_actions"><%= link_to 'Show', post %><br>
+			    <%= link_to 'Edit', edit_post_path(post) %><br>
+			    <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+			  </tr>
+			<% end %>
+		</table>
+	<% end %>
+</div>
 <%= link_to 'New Post', new_post_path %>
