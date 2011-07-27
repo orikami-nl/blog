@@ -1,0 +1,68 @@
+@mixin radius ($radius-corner) {
+	@extend .pie;
+	-webkit-border-radius: $radius-corner;
+	-moz-border-radius: $radius-corner;
+	border-radius: $radius-corner;
+}
+
+@mixin shadow ($shadow-color) {
+	@extend .pie;
+	-moz-box-shadow: 2px 2px 3px $shadow-color;
+	-webkit-box-shadow: 2px 2px 3px $shadow-color;
+	box-shadow: 2px 2px 2px $shadow-color;
+}
+
+@mixin box-background ($boxcolor1, $boxcolor2) {
+	background: $boxcolor1;
+  background: -moz-linear-gradient(top, $boxcolor1 0%, $boxcolor2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$boxcolor1), color-stop(100%,$boxcolor2));
+  background: -webkit-linear-gradient(top, $boxcolor1 0%,$boxcolor2 100%);
+  background: -o-linear-gradient(top, $boxcolor1 0%,$boxcolor2 100%);
+  background: linear-gradient(top, $boxcolor1 0%,$boxcolor2 100%);
+	-pie-background: linear-gradient($boxcolor1, $boxcolor2);
+}
+
+.newspost {
+  float: left;
+  width: 680px;
+  padding: 0 20px;
+  margin: 20px auto;
+  font-size: 20px;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#latest_news {
+  @include radius (3px);
+  @include shadow (#333);
+  @include box-background (#ddd, #7db9e8);
+  width: 1150px;
+	margin-top: 5px;
+  margin-bottom: 15px;
+	margin-left:5px;
+	margin-right:5px;
+  display: block;
+  float: left;
+  img {
+    float: left;  
+		height:130px;
+		width:260px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+  }
+}
+
+#news_overview {
+  h1 {
+  text-align: center;
+  }
+  article {
+    border-top: 1px solid #222;
+  }
+}
+
+#news_frontpage {
+  width: 800px;
+}
