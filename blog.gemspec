@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
 	s.add_dependency 'coffee-script'
 	s.add_dependency 'uglifier'
 	s.add_dependency 'jquery-rails'
-	s.add_dependency "rake", "~> 0.9.2"
+	s.add_dependency "rake"
 end
