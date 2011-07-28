@@ -1,27 +1,25 @@
 .news_blog {
 
-#news_list table {
-  border-collapse: collapse;
-	width:700px;
-}
+#post_list 
+	table {
+	  border-collapse: collapse;
+		width:700px;
+		tr td {
+  		padding: 5px;
+  		vertical-align: top;
+		}
+	.list_actions {
+	  font-size:    x-small;
+	  text-align:   right;
+	  padding-left: 1em;
+	}
+	.list_line_even {
+	  background:   #FFFFFF;
+	}
 
-#news_list table tr td {
-  padding: 5px;
-  vertical-align: top;
+	.list_line_odd {
+	  background:   #FFD700;
+	}
 }
-
-#news_list .list_actions {
-  font-size:    x-small;
-  text-align:   right;
-  padding-left: 1em;
-}
-
-#news_list .list_line_even {
-  background:   #FFFFFF;
-}
-
-#news_list .list_line_odd {
-  background:   #FFD700;
-}
-
+ 
 }
