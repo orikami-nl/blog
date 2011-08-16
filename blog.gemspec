@@ -8,7 +8,6 @@ Gem::Specification.new do |s|
   s.version = "0.0.1"
   s.add_dependency "simple_form"
   s.add_dependency "kaminari"
-	s.add_dependency "sprockets", "2.0.0.beta.10"
 	s.add_dependency 'therubyracer-heroku'
 	s.add_dependency 'sass'
 	s.add_dependency 'json'
